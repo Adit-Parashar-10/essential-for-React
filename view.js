@@ -47,5 +47,21 @@ var [chacha, ,halwa] = a;//chacha me 12 aayega aur halwa me 13
 
  var arrau = [1,2,3,4,5]
 
- const ans = arrau.map(val => val*5);
-console.log(ans);
+//  const ans = arrau.map(val => val*5);
+const ans  = arrau.map(val => val>2 ? val*5 : val);
+
+
+// array ko reduce krne k liye hi hum filter use krte hai
+
+var red = [1,2,3,4,5]
+const bc = red.filter(val => val>2 )
+
+var gen = [
+    {name:"adit", gender:"male"},
+    {name:"ishu", gender:"male"},
+    {name:"rahul", gender:"male"},
+    {name:"avani", gender:"female"},
+    {name:"kanak", gender:"female"}
+]
+
+const ma = gen.filter(val => val.gender === "male");
