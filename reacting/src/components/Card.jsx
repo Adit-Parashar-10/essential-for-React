@@ -7,7 +7,8 @@ function Card() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMt_kSL3s1phTYoFvQG6tdWiuWJ_2KZqhYEQ&s",
       name: "Amazon Basics",
       description:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit consectetur natus accusamus odit placeat corrupti ratione! Pariatur omnis molestiae explicabo et, a sequi?",
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit consectetur natus accusamus odit placeat corrupti ratione! Pariatur omnis molestiae explicabo et, a sequi?",
+      instock:true,
     },
     {
       image:
@@ -15,6 +16,7 @@ function Card() {
       name: "Apple",
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit consectetur natus accusamus odit placeat corrupti ratione! Pariatur omnis molestiae explicabo et, a sequi?",
+        instock:false,
     },
     {
       image:
@@ -22,6 +24,7 @@ function Card() {
       name: "Daily objects",
       description:
         "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit consectetur natus accusamus odit placeat corrupti ratione! Pariatur omnis molestiae explicabo et, a sequi?",
+      intock:true,  
     },
 
   ];
@@ -39,6 +42,9 @@ function Card() {
           <div className="px-3 py-4">
             <h2 className="font-semibold">{elem.name}</h2>
             <p className="text-xs mt-2 text-gray-600">{elem.description}</p>
+            <button className={`px-4 py-1 ${elem.instock ?  'bg-blue-600' : 'bg-red-600'} text-xs rounded-lg text-zinc-200 mt-3`}>
+              {elem.instock ? "in stock" : "out of stock"}
+            </button>
           </div>
         </div>
       ))}
