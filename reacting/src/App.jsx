@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
 
 const App = () => {
+
+  
+
   return (
-    <div>
-      <Card/>
+    <div className='p-4'>
+     
     </div>
   )
 }
