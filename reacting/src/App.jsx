@@ -13,12 +13,22 @@ const App = () => {
   ]
 
   const [realdata , setRealData] = useState(data)
+  const handleFriendsButton = () => {
+    setRealData( (previous)=> {
+      return previous.map( (item,index)=>{
+        if(index === 2){
+          return {...item, friend: !item.friend}
+        }
+        return item;
+      })
+    })
+  }
   
 
   return (
     <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
      {realdata.map((item,idx) => (
-      <Card key={idx} values={item}/>
+      <Card key={idx} handleClick={handleFriendsButton}  values={item}/>
      ))}
     </div>
   )
