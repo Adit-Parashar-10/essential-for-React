@@ -16,7 +16,7 @@ function Card({values, handleClick}) {
         <h3 className='text-xl font-semibold'>{name}</h3>
         <h5 className='text-xs'>{pro}</h5>
         <button onClick={handleClick} className={`px-3 py-1 mt-4 text-white bg-blue-500 font-semibold rounded-md m-3`}>
-        {friend === true ? "Friends" : "Add Fiend"}
+        {friend === true ? "Friends" : "Add_Fiends"}
       </button>
       </div>
       
