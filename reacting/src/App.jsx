@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
 
 const App = () => {
+
+  const name = useRef(null);
+  const age = useRef(null);
 
   const data = [
     {name:"John", pro:"painter", img:"https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", friend:false},
@@ -26,12 +29,19 @@ const App = () => {
   
 
   return (
-    <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
-     {realdata.map((item,idx) => (
-      <Card key={idx} handleClick={handleFriendsButton}  values={item}/>
-     ))}
+    <div className='p-4'>
+     <input ref={name} type="text" name="" id="" placeholder='name' />
+     <input ref={age} type="text" placeholder='age' /> 
+     <input type="submit" name="" id="" />
     </div>
   )
 }
 
 export default App
+
+
+
+// <div className='w-full h-screen bg-zinc-300 flex gap-4 items-center justify-center'>
+//      {realdata.map((item,idx) => (
+//       <Card key={idx} handleClick={handleFriendsButton}  values={item}/>
+//      ))}
