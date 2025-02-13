@@ -1,8 +1,14 @@
 import React, { useRef, useState } from 'react'
+import {useForm} from 'react-hook-form'
 import Navbar from './components/Navbar'
 import Card from './components/Card'
 
 const App = () => {
+
+  useForm
+
+
+  const [val, setval] = useState({name:""});
 
   const name = useRef(null);
   const age = useRef(null);
@@ -11,7 +17,7 @@ const App = () => {
     event.preventDefault();
   }
 
-  
+
   // const data = [
   //   {name:"John", pro:"painter", img:"https://plus.unsplash.com/premium_photo-1672239496290-5061cfee7ebb?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", friend:false},
   //   {name:"Amit", pro:"artist", img:"https://plus.unsplash.com/premium_photo-1689562473471-6e736b8afe15?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D",friend:false },
@@ -35,7 +41,7 @@ const App = () => {
 
   return (
     <div className='p-4'>
-     <form action="" onSubmit={handleSubmit}>
+     <form action="" onChange={(event)=>setval({...val, name:event.target.value})}>
      <input ref={name} type="text" placeholder='name' />
      <input ref={age} type="text" placeholder='age' /> 
      <input type="submit"  />
