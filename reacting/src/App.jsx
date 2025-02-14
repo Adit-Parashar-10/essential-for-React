@@ -44,6 +44,7 @@ const App = () => {
      <form action="" onChange={(event)=>setval({...val, name:event.target.value})}>
      <input ref={name} type="text" placeholder='name' />
      <input ref={age} type="text" placeholder='age' /> 
+     
      <input type="submit"  />
      </form>
     </div>
