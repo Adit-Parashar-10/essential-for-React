@@ -1,43 +1,16 @@
 import React, { useRef, useState } from 'react'
 import {useForm} from 'react-hook-form'
-import Navbar from './components/Navbar'
+import Navbar from './components/Cards'
 import Card from './components/Card'
 
 const App = () => {
 
-  useForm
+  const {register, handleSubmit} = useForm();
 
-
-  const [val, setval] = useState({name:"  ", age:""});
-
-  const name = useRef(null);
-  const age = useRef(null);
-
-  const handleSubmit = (event)=> {
-    event.preventDefault();
-  }
-
-  // const [realdata , setRealData] = useState(data)
-  // const handleFriendsButton = () => {
-  //   setRealData( (previous)=> {
-  //     return previous.map( (item,index)=>{
-  //       if(index === 2){
-  //         return {...item, friend: !item.friend}
-  //       }
-  //       return item;
-  //     })
-  //   })
-  // }
-  
 
   return (
-    <div className='p-4'>
-     <form action="" onChange={(event)=>setval({...val, name:event.target.value})}>
-     <input ref={name} type="text" placeholder='name' />
-     <input ref={age} type="text" placeholder='age' name="" id="" />
-     
-     <input type="submit"  />
-     </form>
+    <div>
+      
     </div>
   )
 }
@@ -50,3 +23,15 @@ export default App
 //      {realdata.map((item,idx) => (
 //       <Card key={idx} handleClick={handleFriendsButton}  values={item}/>
 //      ))}
+
+  // const [realdata , setRealData] = useState(data)
+  // const handleFriendsButton = () => {
+  //   setRealData( (previous)=> {
+  //     return previous.map( (item,index)=>{
+  //       if(index === 2){
+  //         return {...item, friend: !item.friend}
+  //       }
+  //       return item;
+  //     })
+  //   })
+  // }
