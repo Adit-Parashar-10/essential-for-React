@@ -1,9 +1,11 @@
 import React from 'react'
+import Card from './Card'
+
 
 const Cards = () => {
   return (
-    <div className='w-full h-[60vh] bg-sky-200'>
-
+    <div className='w-full  p-4'>
+      <Card/>
     </div>
   )
 }
