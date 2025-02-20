@@ -11,9 +11,9 @@ const App = () => {
 
   return (
     <div className='w-full h-screen bg-zinc-200 flex items-center justify-center'>
-      <div className='container mx-auto'>
-        
-      </div>
+      <Link to="/">home</Link> 
+      <Link to="/user">user</Link> 
+      <Link to="/about">about</Link> 
     </div>
   )
 }
