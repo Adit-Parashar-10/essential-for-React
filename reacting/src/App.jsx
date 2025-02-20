@@ -2,10 +2,10 @@ import React, { useRef, useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { Link, Routes, Route } from "react-router-dom";
-import Home from "./components/Home";
+
 import Nav from "./components/Nav";
-import User from "./components/User";
-import About from "./components/About";
+import Routing from "./utils/Routing";
+
 
 const App = () => {
   const { register, handleSubmit } = useForm();
@@ -14,11 +14,7 @@ const App = () => {
     <>
       <Nav/>
 
-      <Routes>
-        <Route path="/" element ={<Home/>}  />
-        <Route path="/about" element ={<About/>}  />
-        <Route path="/user" element ={<User/>}  />
-      </Routes>
+      <Routing/>
 
     </>
   );
