@@ -15,7 +15,6 @@ const App = () => {
       <Nav/>
 
       <Routing/>
-
     </>
   );
 };
